@@ -27,7 +27,8 @@ class InicioFragment : Fragment() {
         val view = binding.root
 
         binding.button.setOnClickListener {
-            findNavController().navigate(R.id.action_inicioFragment_to_partidaFragment)
+            val action = InicioFragmentDirections.playAction("AAA", "BBB")
+            findNavController().navigate(action)
         }
         return view
     }

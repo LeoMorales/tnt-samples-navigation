@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentInicioBinding
+import androidx.navigation.fragment.navArgs
 import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentPartidaBinding
 
 
@@ -17,9 +17,12 @@ class PartidaFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
+    val args: PartidaFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,8 +31,10 @@ class PartidaFragment : Fragment() {
         _binding = FragmentPartidaBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        binding.team1Label.text = args.equipoANombre
+        binding.team2Label.text = args.equipoBNombre
         binding.imageButtonShareResult.setOnClickListener {
-            findNavController().navigate(R.id.action_partidaFragment_to_resultadoFragment)
+            findNavController().navigate(R.id.show_result_action)
         }
 
         return view

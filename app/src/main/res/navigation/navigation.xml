@@ -11,7 +11,7 @@
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_inicioFragment_to_partidaFragment"
+            android:id="@+id/play_action"
             app:destination="@id/partidaFragment" />
     </fragment>
     <fragment
@@ -20,8 +20,16 @@
         android:label="fragment_partida"
         tools:layout="@layout/fragment_partida" >
         <action
-            android:id="@+id/action_partidaFragment_to_resultadoFragment"
+            android:id="@+id/show_result_action"
             app:destination="@id/resultadoFragment" />
+        <argument
+            android:name="equipo_a_nombre"
+            app:argType="string"
+            android:defaultValue="Equipo A" />
+        <argument
+            android:name="equipo_b_nombre"
+            app:argType="string"
+            android:defaultValue="Equipo B" />
     </fragment>
     <fragment
         android:id="@+id/resultadoFragment"
