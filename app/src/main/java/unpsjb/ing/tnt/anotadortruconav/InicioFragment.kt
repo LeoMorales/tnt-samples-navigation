@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentInicioBinding
 
@@ -28,7 +29,7 @@ class InicioFragment : Fragment() {
 
         binding.button.setOnClickListener {
             val action = InicioFragmentDirections.playAction("AAA", "BBB")
-            findNavController().navigate(action)
+            it.findNavController().navigate(action)
         }
         return view
     }

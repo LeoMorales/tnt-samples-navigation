@@ -32,7 +32,10 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding.enabled = true
+    buildFeatures {
+        viewBinding true
+        //dataBinding true
+    }
 }
 
 dependencies {
@@ -57,4 +60,7 @@ dependencies {
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:1.0.0-alpha10"
+
+    // Navigation Drawer soportado con: implementation 'com.google.android.material:material:1.3.0', importada mas arriba
+
 }
