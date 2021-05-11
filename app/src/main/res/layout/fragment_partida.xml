@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="gameViewModel"
+            type="unpsjb.ing.tnt.anotadortruconav.GameViewModel"
+        />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +39,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/inc1_button"
-            app:layout_constraintTop_toBottomOf="@+id/scoreB3_imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/scoreB3_imageView"
+            android:onClick="@{() -> gameViewModel.incrementScoreB()}"
+        />
 
         <TextView
             android:id="@+id/team2_label"
@@ -40,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:layout_weight="1"
-            android:text="Equipo2"
+            android:text="@{gameViewModel.name_b}"
             android:textColor="@color/blue"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/scoreB1_imageView"
@@ -55,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:layout_weight="1"
-            android:text="Equipo1"
+            android:text="@{gameViewModel.name_a}"
             android:textColor="@color/blue"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/scoreA1_imageView"
@@ -108,7 +117,9 @@
             app:layout_constraintEnd_toStartOf="@+id/inc2_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scoreA3_imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/scoreA3_imageView"
+            android:onClick="@{() -> gameViewModel.incrementScoreA()}"
+        />
 
         <ImageView
             android:id="@+id/scoreB1_imageView"
@@ -156,7 +167,9 @@
             app:layout_constraintEnd_toStartOf="@+id/scoreA1_imageView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scoreA1_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreA1_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreA()}"
+        />
 
         <Button
             android:id="@+id/decB_button_1"
@@ -171,7 +184,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/scoreB1_imageView"
-            app:layout_constraintTop_toTopOf="@+id/scoreB1_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreB1_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreB()}"
+        />
 
         <Button
             android:id="@+id/decB_button_2"
@@ -186,7 +201,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/decB_button_1"
-            app:layout_constraintTop_toTopOf="@+id/scoreB2_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreB2_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreB()}"
+        />
 
         <Button
             android:id="@+id/decB_button_3"
@@ -200,7 +217,9 @@
             app:layout_constraintBottom_toBottomOf="@+id/scoreB3_imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/decB_button_2"
-            app:layout_constraintTop_toTopOf="@+id/scoreB3_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreB3_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreB()}"
+        />
 
         <Button
             android:id="@+id/decA_button_2"
@@ -215,7 +234,9 @@
             app:layout_constraintEnd_toEndOf="@+id/decA_button_1"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scoreA2_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreA2_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreA()}"
+        />
 
         <Button
             android:id="@+id/decA_button_3"
@@ -230,7 +251,9 @@
             app:layout_constraintEnd_toEndOf="@+id/decA_button_2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/scoreA3_imageView" />
+            app:layout_constraintTop_toTopOf="@+id/scoreA3_imageView"
+            android:onClick="@{() -> gameViewModel.decrementScoreA()}"
+        />
 
         <ImageButton
             android:id="@+id/imageButton_shareResult"

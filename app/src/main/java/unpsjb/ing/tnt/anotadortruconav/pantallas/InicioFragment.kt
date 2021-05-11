@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import unpsjb.ing.tnt.anotadortruconav.GameViewModel
 import unpsjb.ing.tnt.anotadortruconav.R
 import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentInicioBinding
 
@@ -17,6 +19,8 @@ class InicioFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private val model: GameViewModel by activityViewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -25,6 +29,7 @@ class InicioFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate view and obtain an instance of the binding class
         _binding = DataBindingUtil.inflate(
             inflater,
@@ -35,6 +40,9 @@ class InicioFragment : Fragment() {
         val view = binding.root
 
         binding.button.setOnClickListener {
+            model.setNameA(binding.editTextTeamA.text.toString())
+            model.setNameB(binding.editTextTeamB.text.toString())
+
             val action = InicioFragmentDirections.playAction("AAA", "BBB")
             it.findNavController().navigate(action)
         }
