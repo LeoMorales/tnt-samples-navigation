@@ -1,10 +1,11 @@
-package unpsjb.ing.tnt.anotadortruconav
+package unpsjb.ing.tnt.anotadortruconav.pantallas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import unpsjb.ing.tnt.anotadortruconav.R
 
 class AboutFragment : Fragment() {
 

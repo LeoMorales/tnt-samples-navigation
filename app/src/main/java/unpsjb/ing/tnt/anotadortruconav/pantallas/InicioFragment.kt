@@ -1,12 +1,13 @@
-package unpsjb.ing.tnt.anotadortruconav
+package unpsjb.ing.tnt.anotadortruconav.pantallas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
+import unpsjb.ing.tnt.anotadortruconav.R
 import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentInicioBinding
 
 class InicioFragment : Fragment() {
@@ -24,7 +25,13 @@ class InicioFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentInicioBinding.inflate(inflater, container, false)
+        // Inflate view and obtain an instance of the binding class
+        _binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_inicio,
+            container,
+            false
+        )
         val view = binding.root
 
         binding.button.setOnClickListener {

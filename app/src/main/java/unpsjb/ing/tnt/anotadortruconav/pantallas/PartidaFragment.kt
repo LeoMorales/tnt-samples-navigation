@@ -1,12 +1,14 @@
-package unpsjb.ing.tnt.anotadortruconav
+package unpsjb.ing.tnt.anotadortruconav.pantallas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import unpsjb.ing.tnt.anotadortruconav.R
 import unpsjb.ing.tnt.anotadortruconav.databinding.FragmentPartidaBinding
 
 
@@ -16,7 +18,6 @@ class PartidaFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,12 @@ class PartidaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPartidaBinding.inflate(inflater, container, false)
+        _binding = DataBindingUtil.inflate(
+                inflater,
+                R.layout.fragment_partida,
+                container,
+                false
+        )
         val view = binding.root
 
         binding.team1Label.text = args.equipoANombre

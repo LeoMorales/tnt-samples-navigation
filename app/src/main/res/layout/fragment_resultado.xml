@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F2E7"
-    tools:context=".ResultadoFragment">
+    tools:context=".pantallas.ResultadoFragment">
 
     <ImageButton
         android:id="@+id/imageButton_shareResult2"

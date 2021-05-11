@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="unpsjb.ing.tnt.anotadortruconav.InicioFragment"
+        android:name="unpsjb.ing.tnt.anotadortruconav.pantallas.InicioFragment"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/partidaFragment"
-        android:name="unpsjb.ing.tnt.anotadortruconav.PartidaFragment"
+        android:name="unpsjb.ing.tnt.anotadortruconav.pantallas.PartidaFragment"
         android:label="fragment_partida"
         tools:layout="@layout/fragment_partida" >
         <action
@@ -33,17 +33,17 @@
     </fragment>
     <fragment
         android:id="@+id/resultadoFragment"
-        android:name="unpsjb.ing.tnt.anotadortruconav.ResultadoFragment"
+        android:name="unpsjb.ing.tnt.anotadortruconav.pantallas.ResultadoFragment"
         android:label="fragment_resultado"
         tools:layout="@layout/fragment_resultado" />
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="unpsjb.ing.tnt.anotadortruconav.AboutFragment"
+        android:name="unpsjb.ing.tnt.anotadortruconav.pantallas.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/historialFragment"
-        android:name="unpsjb.ing.tnt.anotadortruconav.HistorialFragment"
+        android:name="unpsjb.ing.tnt.anotadortruconav.pantallas.HistorialFragment"
         android:label="fragment_historial"
         tools:layout="@layout/fragment_historial" />
 </navigation>
