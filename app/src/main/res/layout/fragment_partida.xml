@@ -44,6 +44,21 @@
         />
 
         <TextView
+            android:id="@+id/team1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:text="@{gameViewModel.name_a}"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/scoreA1_imageView"
+            app:layout_constraintEnd_toStartOf="@+id/team2_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/team2_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,20 +73,7 @@
             app:layout_constraintStart_toEndOf="@+id/team1_label"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/team1_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_weight="1"
-            android:text="@{gameViewModel.name_a}"
-            android:textColor="@color/blue"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/scoreA1_imageView"
-            app:layout_constraintEnd_toStartOf="@+id/team2_label"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <ImageView
             android:id="@+id/scoreA1_imageView"
