@@ -42,9 +42,6 @@ class PartidaFragment : Fragment() {
         )
         val view = binding.root
 
-        //binding.team1Label.text = model.name_a.value
-        //binding.team2Label.text = model.name_b.value
-
         binding.gameViewModel = model
         binding.setLifecycleOwner(this)
 
